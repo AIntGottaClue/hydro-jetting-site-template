@@ -9,14 +9,9 @@ const home = city.home;
 const [s1, s2, s3, s4] = home.sections;
 const faqs = home.faqs;
 const steps = home.steps;
-const tiles = [
-  { big: String(services.length), small: 'Drain problems covered' },
-  { big: String(neighborhoods.length), small: 'Local area pages' },
-  { big: 'Call', small: 'To confirm availability' },
-];
 ---
 <Base title={home.title} description={home.desc} path="/" extraSchema={[faqSchema(faqs)]}>
-  <Hero headline={home.h1} intro={home.intro} location="Homepage" tiles={tiles} />
+  <Hero headline={home.h1} intro={home.intro} location="Homepage" />
   <section class="content-section"><div class="content-inner">
     <p class="eyebrow">Drain problems</p>
     <div class="section-head"><h2 class="section-title">{s1.h}</h2><p class="section-intro">{s1.ps[0]}</p></div>
@@ -47,5 +42,5 @@ const tiles = [
     <h2 class="section-title">{home.faqHeading}</h2>
     <div class="content-list">{faqs.map((f) => <article class="faq-row"><h3>{f.q}</h3><p>{f.a}</p></article>)}</div>
   </div></section>
-<section class="nh-body"><div class="nh-inner"><p set:html={home.footerLinksHtml.replace(/href="(\/[^"]*)"/g, (_m, h) => 'href="' + u(h) + '"')} /></div></section>
+<section class="nh-body"><div class="nh-inner"><p set:html={home.footerLinksHtml.replace(/href="(\/[^\"]*)"/g, (_m, h) => 'href="' + u(h) + '"')} /></div></section>
 </Base>
