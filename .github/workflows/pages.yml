@@ -23,7 +23,7 @@ jobs:
       # For a city build from this template, set BASE to that repo's name.
       - run: npm run build
         env:
-          BASE: /hydro-jetting-site-template
+          BASE: /riverside-hydro-site-template
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
