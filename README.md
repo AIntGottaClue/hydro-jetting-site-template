@@ -11,9 +11,17 @@ structure are shared and never edited per city.
 2. Fill every slot with that city's unique copy. `riverside-oh.json` is a filled
    reference - copy its shape, not its words.
 3. Set `ACTIVE_CITY` in `city.config.mjs` (root) to the new slug. That is the
-   only code edit per city.
+   only code edit per city. The template repo itself keeps
+   `ACTIVE_CITY = '_placeholder'` so the preview shows the variable slots.
 4. Build: `npm install && npm run build`.
    For a GitHub Pages preview: `BASE=/<repo-name> npm run build`.
+
+## Tokens in the placeholder file
+
+The GitHub Pages preview builds `_placeholder.json`, so the slots show as
+literal variables: {Biz Name}, {Main Service}, {City, ST}, {Service One}
+through {Service Three}, {Location One} through {Location Three}. Riverside
+(`riverside-oh.json`) stays in the repo as the filled example.
 
 ## What the slots are
 

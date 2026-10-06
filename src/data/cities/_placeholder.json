@@ -4,29 +4,29 @@
     "region": "{ST}",
     "regionName": "{State}",
     "country": "US",
-    "niche": "Hydro Jetting",
-    "brand": "{City} Hydro Jetting Pros",
-    "origin": "https://{city}hydrojetting.prosapp.site",
+    "niche": "{Main Service}",
+    "brand": "{Biz Name}",
+    "origin": "https://template.prosapp.site",
     "phoneDisplay": "(877) 761-0283",
     "phoneHref": "+18777610283",
     "ga4MeasurementId": "",
     "airchattyTrackingId": "{tracker id}",
-    "businessDescription": "{One sentence: what the site offers, naming {City}, {State}.}",
-    "orgDescription": "{One sentence for schema.org Organization: what the site is, plus the availability/suitability confirmation note.}",
-    "llmsSummary": "{Two sentences for llms.txt: what the site offers in {City}, the phone number, and the no-guarantee note.}",
-    "schemaServiceType": "Hydro jetting"
+    "businessDescription": "{One sentence: what {Biz Name} offers in {City, ST}.}",
+    "orgDescription": "{One schema.org sentence: what {Biz Name} is, plus the availability/suitability confirmation note.}",
+    "llmsSummary": "{Two sentences for llms.txt: what {Biz Name} offers in {City, ST}, the phone number, and the no-guarantee note.}",
+    "schemaServiceType": "{Main Service}"
   },
   "ui": {
-    "heroEyebrow": "{City}, {State} drain lines",
-    "statusStrip": "Hydro jetting information and requests for {City}, {ST}",
+    "heroEyebrow": "{City, ST} drain lines",
+    "statusStrip": "{Main Service} information and requests for {City, ST}",
     "formBandTitle": "{Form band heading, e.g. Tell us what the drain is doing.}",
     "formBandText": "{One or two sentences above the form: what details to share. Keep the note that a request is not an appointment.}",
     "calloutTitle": "{Bottom call-to-action heading}",
     "calloutText": "{One sentence next to the call button}",
-    "successNiche": "hydro jetting"
+    "successNiche": "{main service}"
   },
   "home": {
-    "h1": "{Homepage headline, unique to {City}. From the headlines doc, not a formula.}",
+    "h1": "{Homepage headline for {Biz Name}, unique to {City, ST}. From the headlines doc, not a formula.}",
     "intro": "{2-4 sentences of genuinely local homepage copy: real housing stock, real drain situations in {City}. No city-name swap.}",
     "lead": [],
     "sections": [
@@ -73,7 +73,7 @@
         "a": "{Answer}"
       }
     ],
-    "title": "{Homepage title tag}",
+    "title": "{Homepage title tag | {Biz Name}}",
     "desc": "{Homepage meta description}",
     "steps": [
       {
@@ -153,7 +153,7 @@
   },
   "pages": {
     "service-one": {
-      "h1": "{Service One page headline, unique to {City}. From the headlines doc.}",
+      "h1": "{Service One page headline, unique to {City, ST}. From the headlines doc.}",
       "intro": "{2-4 sentences, specific to this service and {City}}",
       "lead": [],
       "sections": [
@@ -193,7 +193,7 @@
       "desc": "{Meta description}"
     },
     "service-two": {
-      "h1": "{Service Two page headline}",
+      "h1": "{Service Two page headline, unique to {City, ST}. From the headlines doc.}",
       "intro": "{Intro}",
       "lead": [],
       "sections": [
@@ -214,7 +214,7 @@
       "desc": "{Meta description}"
     },
     "service-three": {
-      "h1": "{Service Three page headline}",
+      "h1": "{Service Three page headline, unique to {City, ST}. From the headlines doc.}",
       "intro": "{Intro}",
       "lead": [],
       "sections": [
@@ -313,7 +313,7 @@
     {
       "slug": "location-one",
       "name": "{Location One}",
-      "h1": "Hydro Jetting in {Location One}, {City} {ST}",
+      "h1": "{Main Service} in {Location One}, {City, ST}",
       "title": "{Title tag}",
       "description": "{Meta description}",
       "intro": "{2-3 sentences on the card: real, researched local context for {Location One}. Helpful like the Topeka pages, not a stock sentence.}",
@@ -384,7 +384,7 @@
     {
       "slug": "location-two",
       "name": "{Location Two}",
-      "h1": "Hydro Jetting in {Location Two}, {City} {ST}",
+      "h1": "{Main Service} in {Location Two}, {City, ST}",
       "title": "{Title tag}",
       "description": "{Meta description}",
       "intro": "{Card intro}",
@@ -418,7 +418,7 @@
     {
       "slug": "location-three",
       "name": "{Location Three}",
-      "h1": "Hydro Jetting in {Location Three}, {City} {ST}",
+      "h1": "{Main Service} in {Location Three}, {City, ST}",
       "title": "{Title tag}",
       "description": "{Meta description}",
       "intro": "{Card intro}",
