@@ -4,7 +4,7 @@ import { business } from '../lib/site';
 import { city } from '../data/city';
 import { u } from '../lib/utils';
 import RequestForm from './RequestForm.astro';
-const { headline, intro, location, crumbs = [], tiles = [], eyebrow = city.ui.heroEyebrow } = Astro.props;
+const { headline, intro, location, crumbs = [], eyebrow = city.ui.heroEyebrow } = Astro.props;
 const showImage = !['Privacy', 'Terms'].includes(location);
 const img = pageImage(headline);
 ---
@@ -21,7 +21,6 @@ const img = pageImage(headline);
       <h1>{headline}</h1>
       <p class="hero-copy">{intro}</p>
       <div class="hero-cta"><a class="button-primary" href={business.phoneHref}>Call {business.phoneDisplay}</a><a class="button-soft" href="#request-service">Request a call</a></div>
-      {tiles.length > 0 && <div class="tile-row">{tiles.map((t) => <div class="tile"><strong>{t.big}</strong><span>{t.small}</span></div>)}</div>}
     </div>
     {showImage && (
       <figure class="hero-photo">
