@@ -3,11 +3,12 @@ import { pageImage } from '../lib/pageImages';
 import { business } from '../lib/site';
 import { city } from '../data/city';
 import { u } from '../lib/utils';
+import RequestForm from './RequestForm.astro';
 const { headline, intro, location, crumbs = [], tiles = [], eyebrow = city.ui.heroEyebrow } = Astro.props;
 const showImage = !['Privacy', 'Terms'].includes(location);
 const img = pageImage(headline);
 ---
-<section class="hero">
+<div class="nh-hero-shell"><section class="hero">
   <div class={showImage ? 'hero-inner' : 'hero-inner hero-inner--text'}>
     <div class="hero-copy-col">
       {crumbs.length > 0 && (
@@ -29,4 +30,6 @@ const img = pageImage(headline);
       </figure>
     )}
   </div>
-</section>
+</section><div class="nh-hero-form"><RequestForm location={location} /></div></div>
+
+<style is:global>.nh-hero-shell{display:grid;grid-template-columns:minmax(0,2fr) minmax(320px,1fr);max-width:1280px;margin:auto;align-items:start}.nh-hero-shell .hero-inner{grid-template-columns:1fr;padding:56px 24px}.nh-hero-shell .hero-visual{display:none}.nh-hero-form{padding:56px 24px}.nh-hero-form .form-card{width:100%;max-width:100%}@media(max-width:900px){.nh-hero-shell{grid-template-columns:1fr}.nh-hero-form{padding:0 24px 44px}}</style>

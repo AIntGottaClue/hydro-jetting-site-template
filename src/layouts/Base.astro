@@ -7,10 +7,8 @@ import { SITE_URL, business } from '../lib/site';
 import { pageSchema } from '../lib/seo';
 import { city } from '../data/city';
 import { u } from '../lib/utils';
-import RequestForm from '../components/RequestForm.astro';
 import Callout from '../components/Callout.astro';
 const { title, description, path, crumbs = [], extraSchema = [], service = false, noCallout = false } = Astro.props;
-const loc = path === '/' ? 'Homepage' : path === '/privacy/' ? 'Privacy' : path === '/terms/' ? 'Terms' : (crumbs.length ? crumbs[crumbs.length - 1].name : 'Page');
 const canonical = `${SITE_URL}${path}`;
 ---
 <!doctype html>
@@ -41,7 +39,6 @@ const canonical = `${SITE_URL}${path}`;
     <SiteHeader />
     <div class="status-strip"><div class="status-inner"><span class="status-text"><span class="status-dot" aria-hidden="true"></span>{city.ui.statusStrip}</span><a href={business.phoneHref}>{business.phoneDisplay}</a></div></div>
     <main id="main"><slot />
-      {!Astro.props.noFormBand && <section class="form-band"><div class="band-inner"><div class="band-copy"><p class="eyebrow">Request service</p><h2 class="band-title">{city.ui.formBandTitle}</h2><p>{city.ui.formBandText}</p><a class="button-primary" href={business.phoneHref}>Prefer to talk? Call {business.phoneDisplay}</a></div><RequestForm location={loc} /></div></section>}
       {!noCallout && <Callout />}
     </main>
     <SiteFooter />
